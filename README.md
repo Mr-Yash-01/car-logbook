@@ -3,8 +3,8 @@
 Builds an ATO-style motor vehicle logbook spreadsheet from what you earned.
 Nothing to install, nothing to host.
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR-NAME/car-logbook/blob/main/logbook.ipynb)
-[![Open in Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/YOUR-NAME/car-logbook/main?labpath=logbook.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Mr-Yash-01/car-logbook/blob/main/logbook.ipynb)
+[![Open in Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Mr-Yash-01/car-logbook/main?labpath=logbook.ipynb)
 
 Click **Open in Colab**, fill in the boxes, run the cells. The spreadsheet
 downloads to your device. Binder is the same notebook without needing a Google
