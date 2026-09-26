@@ -1,0 +1,9 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    { "name": "Make a logbook (questions)", "type": "debugpy", "request": "launch",
+      "program": "cli.py", "console": "integratedTerminal" },
+    { "name": "Run every test", "type": "debugpy", "request": "launch",
+      "program": "run_tests.py", "console": "integratedTerminal" }
+  ]
+}

@@ -49,7 +49,7 @@ def make_logbook(*, start_date: str, weeks: int = 12,
                  business_share_on_work_days="85%",
                  max_km_per_day: int = 420, max_business_km_per_day: int = 350,
                  max_private_km_per_day: int = 150,
-                 city: str = "brisbane", sheet_per_financial_year: bool = True,
+                 city: str = "sydney", sheet_per_financial_year: bool = True,
                  seed: int = 42, filename: str = "",
                  accept_suggestion: bool = True, download: bool = True,
                  quiet: bool = False):
@@ -137,11 +137,40 @@ def make_logbook(*, start_date: str, weeks: int = 12,
         say(f"! {warning}")
     say(f"Saved: {path}")
 
-    if download and in_colab():
-        try:
-            from google.colab import files
-            files.download(str(path))
-            say("Your browser is downloading it now.")
-        except Exception as exc:                             # noqa: BLE001
-            say(f"(browser download unavailable: {exc})")
+    if download:
+        for line in delivery_lines(path, in_colab()):
+            say(line)
     return path
+
+
+def by_hand_lines(name: str) -> list:
+    """How to fetch the file from the file list, for someone on any device."""
+    return [
+        "  1. Open the file list: the folder icon on the left edge of the screen.",
+        "     On a narrow screen, tap the menu button at the top left first.",
+        f"  2. Find {name} in that list and tap the three dots beside it.",
+        "  3. Choose Download.",
+    ]
+
+
+def delivery_lines(path, colab: bool) -> list:
+    """What to tell someone about getting the finished file onto their device."""
+    if not colab:
+        return ["",
+                f"The file is saved beside this notebook, named {path.name}.",
+                "Open it with Excel, Google Sheets, or any free spreadsheet app."]
+    try:
+        from google.colab import files
+        files.download(str(path))
+    except Exception as exc:                                 # noqa: BLE001
+        return ["",
+                f"The automatic download is not available here ({exc}).",
+                "Get the file by hand instead:"] + by_hand_lines(path.name)
+    return ["",
+            "Your device is downloading it now. On a computer it lands in your",
+            "Downloads folder - allow the download if your browser asks.",
+            "",
+            "Nothing arrived? That happens on phones. Get it by hand instead:"
+            ] + by_hand_lines(path.name) + [
+            "",
+            "Open it with Google Sheets, Excel, or any free spreadsheet app."]

@@ -26,7 +26,7 @@ def run(args, answers="", timeout=180):
 
 ANSWERS = ["01/07/2025", "12", "y",                    # period
            "n", "5000", "5000", "5000",                # income month by month
-           "Yash Vadukiya", "", "Toyota", "Corolla Hybrid", "2021", "1.8L", "ABC123",
+           "Sam Taylor", "", "Toyota", "Corolla Hybrid", "2021", "1.8L", "ABC123",
            "45230", "55230",                           # odometer
            "3",                                        # both kinds of work
            "fri,sat,sun", "85", "420", "350", "150", "42",

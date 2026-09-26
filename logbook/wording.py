@@ -47,7 +47,7 @@ PRIVATE_REASONS = [
 AREAS = {
     "brisbane": [
         "Brisbane CBD", "Fortitude Valley", "South Bank", "West End", "Newstead",
-        "Chermside", "North Lakes", "Aspley", "Nundah", "Kedron", "Everton Park",
+        "Chermside", "Woolloongabba", "Aspley", "Nundah", "Kedron", "Everton Park",
         "Indooroopilly", "Toowong", "Mount Gravatt", "Carindale", "Sunnybank",
         "Brisbane Airport", "Hamilton", "Springwood", "Logan Central",
     ],
@@ -87,7 +87,7 @@ AREAS = {
     ],
 }
 
-DEFAULT_CITY = "brisbane"
+DEFAULT_CITY = "sydney"
 
 
 def areas_for(city: str | None = None) -> list:

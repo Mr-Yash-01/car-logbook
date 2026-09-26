@@ -121,7 +121,7 @@ for value, ok in [("Toyota", True), ("Mercedes-Benz", True), ("Mazda CX-5", True
                   ("=HYPERLINK(1)", False), ("<script>", False), ("x" * 60, False)]:
     check(f"make {value!r} {'accepted' if ok else 'refused'}",
           (not refuses(L.clean_vehicle_word, value, "make")[0]) == ok)
-for value, ok in [("Yash Vadukiya", True), ("O'Brien", True), ("Anne-Marie Smith", True),
+for value, ok in [("Sam Taylor", True), ("O'Brien", True), ("Anne-Marie Smith", True),
                   ("=cmd", False), ("2Pac", False), ("x" * 80, False)]:
     check(f"name {value!r} {'accepted' if ok else 'refused'}",
           (not refuses(L.clean_person, value)[0]) == ok)
@@ -153,7 +153,7 @@ check("smallest journey pulled under the caps",
       cfg.min_journey_km <= min(cfg.max_business_km_per_day, cfg.max_private_km_per_day))
 check("unknown work type repaired", cfg.work_type == "rideshare")
 check("unknown sheet mode repaired", cfg.sheet_mode == "combined")
-check("unknown city repaired", cfg.city == "brisbane")
+check("unknown city repaired", cfg.city == "sydney")
 check("empty wording restored", cfg.rideshare_reasons and cfg.private_reasons)
 check("areas filled from the city", len(cfg.rideshare_destinations) > 4)
 check("bad seed repaired", isinstance(cfg.seed, int))

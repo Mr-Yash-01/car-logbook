@@ -55,7 +55,7 @@ QUESTIONS = {
         "ask": "What is your full name?",
         "why": "It goes at the top of the logbook as the driver. Leave it out if you "
                "would rather not have it in the file.",
-        "example": "Yash Vadukiya",
+        "example": "Sam Taylor",
     },
     "abn": {
         "ask": "What is your ABN?",
@@ -161,7 +161,7 @@ QUESTIONS = {
         "ask": "Which city do you drive in?",
         "why": "Picks a starting list of suburbs for the Destination column. You can "
                "replace them with your own next.",
-        "example": "brisbane",
+        "example": "sydney",
     },
     "rideshare_reasons": {
         "ask": "How would you describe your rideshare trips?",
@@ -187,7 +187,7 @@ QUESTIONS = {
         "why": "One is picked for each work journey, and a long day names two, since "
                "one suburb would not match the distance. Leave it as the default list "
                "if it fits your city.",
-        "example": "Brisbane CBD | Chermside | North Lakes",
+        "example": "Sydney CBD | Parramatta | Bondi",
     },
 
     # --- output ------------------------------------------------------------------

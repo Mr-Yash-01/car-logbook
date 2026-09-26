@@ -1,2 +1,9 @@
-.venv
+.venv/
+__pycache__/
+*.pyc
+*.xlsx
+!sample_logbook.xlsx
+!sample_two_years.xlsx
 .env
+.ipynb_checkpoints/
+car-logbook/
